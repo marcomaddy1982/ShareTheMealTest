@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "imageUrl": "https://images.contentful.com/test.png",
+      "htmlText": "<h2>Test HtmlText</h2>",
+      "buttons": [
+        {
+          "action": "refresh",
+          "text": "Refresh"
+        }
+      ]
+    }
+  ]
+}

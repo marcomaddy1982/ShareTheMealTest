@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-ShareTheMealTest/Pods-ShareTheMealTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
+${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
+${BUILT_PRODUCTS_DIR}/Networking/Networking.framework
+${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework
+${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework

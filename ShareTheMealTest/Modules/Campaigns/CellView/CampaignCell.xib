@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CampaignCell" id="gTV-IL-0wX" customClass="CampaignCell" customModule="ShareTheMealTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="UOw-kv-FgC" userLabel="Image - Campaign">
+                        <rect key="frame" x="57" y="32" width="300" height="300"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="300" id="JQw-Cy-lxL"/>
+                            <constraint firstAttribute="width" constant="300" id="jpd-qG-Jey"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJP-do-mtH" userLabel="Label - html">
+                        <rect key="frame" x="16" y="348" width="382" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="120" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7d0-FY-Gr2">
+                        <rect key="frame" x="16" y="384.5" width="382" height="120"/>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="7d0-FY-Gr2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="1vi-PZ-97t"/>
+                <constraint firstAttribute="trailing" secondItem="7d0-FY-Gr2" secondAttribute="trailing" constant="16" id="IkY-ap-pRM"/>
+                <constraint firstItem="UOw-kv-FgC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QFG-zi-RPa"/>
+                <constraint firstItem="UOw-kv-FgC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="32" id="UXh-Cg-eUe"/>
+                <constraint firstAttribute="trailing" secondItem="AJP-do-mtH" secondAttribute="trailing" constant="16" id="bGM-dJ-guN"/>
+                <constraint firstItem="7d0-FY-Gr2" firstAttribute="top" secondItem="AJP-do-mtH" secondAttribute="bottom" constant="16" id="fLK-hT-Vex"/>
+                <constraint firstItem="AJP-do-mtH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="qWY-Wd-yNf"/>
+                <constraint firstItem="AJP-do-mtH" firstAttribute="top" secondItem="UOw-kv-FgC" secondAttribute="bottom" constant="16" id="xlM-0j-ung"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="288" height="295"/>
+            <connections>
+                <outlet property="imageCampaign" destination="UOw-kv-FgC" id="cQX-Ed-RPh"/>
+                <outlet property="labelHtmlText" destination="AJP-do-mtH" id="enJ-YN-97q"/>
+                <outlet property="stackButtons" destination="7d0-FY-Gr2" id="MMq-wz-ovd"/>
+            </connections>
+            <point key="canvasLocation" x="-8.6956521739130448" y="48.549107142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

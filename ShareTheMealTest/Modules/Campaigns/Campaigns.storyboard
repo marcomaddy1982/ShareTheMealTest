@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TLz-or-jLO">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Campaigns View Controller-->
+        <scene sceneID="d8c-Ld-Usn">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="TLz-or-jLO" customClass="CampaignsViewController" customModule="ShareTheMealTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQ9-KX-xcn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LV4-Id-jhk">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="INz-49-wWZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cWX-eY-VFh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TLz-or-jLO" id="edn-YK-E6N"/>
+                                    <outlet property="delegate" destination="TLz-or-jLO" id="YPd-Jp-db0"/>
+                                </connections>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzF-wd-pLL" customClass="LoadingView" customModule="ShareTheMealTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylx-B2-l4J" customClass="ErrorView" customModule="ShareTheMealTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="errorViewTouchUpInside:" destination="TLz-or-jLO" eventType="touchUpInside" id="6dU-rA-4Wo"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ylx-B2-l4J" firstAttribute="leading" secondItem="nRo-cO-ivZ" secondAttribute="leading" id="98j-fj-BuQ"/>
+                            <constraint firstItem="LV4-Id-jhk" firstAttribute="top" secondItem="nRo-cO-ivZ" secondAttribute="top" constant="16" id="D7J-eV-G5y"/>
+                            <constraint firstItem="LV4-Id-jhk" firstAttribute="trailing" secondItem="nRo-cO-ivZ" secondAttribute="trailing" id="ICd-YF-8KR"/>
+                            <constraint firstItem="uzF-wd-pLL" firstAttribute="top" secondItem="nRo-cO-ivZ" secondAttribute="top" id="MIQ-Mp-sKy"/>
+                            <constraint firstItem="nRo-cO-ivZ" firstAttribute="trailing" secondItem="uzF-wd-pLL" secondAttribute="trailing" id="NXc-HL-Kgb"/>
+                            <constraint firstItem="nRo-cO-ivZ" firstAttribute="bottom" secondItem="Ylx-B2-l4J" secondAttribute="bottom" id="Pnf-y1-PWg"/>
+                            <constraint firstItem="LV4-Id-jhk" firstAttribute="leading" secondItem="nRo-cO-ivZ" secondAttribute="leading" id="QZf-d6-z1b"/>
+                            <constraint firstItem="Ylx-B2-l4J" firstAttribute="top" secondItem="nRo-cO-ivZ" secondAttribute="top" id="YeI-oo-A1T"/>
+                            <constraint firstItem="uzF-wd-pLL" firstAttribute="leading" secondItem="nRo-cO-ivZ" secondAttribute="leading" id="ae3-JB-4Ql"/>
+                            <constraint firstItem="nRo-cO-ivZ" firstAttribute="trailing" secondItem="Ylx-B2-l4J" secondAttribute="trailing" id="eQ0-ec-Fxo"/>
+                            <constraint firstItem="LV4-Id-jhk" firstAttribute="bottom" secondItem="nRo-cO-ivZ" secondAttribute="bottom" id="jpJ-DY-bjY"/>
+                            <constraint firstItem="nRo-cO-ivZ" firstAttribute="bottom" secondItem="uzF-wd-pLL" secondAttribute="bottom" id="lGP-uS-DLt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nRo-cO-ivZ"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LV4-Id-jhk" id="Ta7-yj-7EM"/>
+                        <outlet property="errorView" destination="Ylx-B2-l4J" id="p9C-9m-bw9"/>
+                        <outlet property="loadingView" destination="uzF-wd-pLL" id="PdL-wF-Oku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CN-uk-fxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.05797101449275" y="-17.410714285714285"/>
+        </scene>
+    </scenes>
+</document>

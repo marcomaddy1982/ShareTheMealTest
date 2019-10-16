@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "imageUrl": "https://images.contentful.com/test.png",
+      "htmlText": "<h2>Test HtmlText</h2>",
+      "buttons": [
+        {
+          "action": "donate",
+          "text": "Make a donation"
+        },
+        {
+          "action": "refresh",
+          "text": "Refresh"
+        },
+        {
+          "action": "facebook",
+          "text": "Open facebook"
+        }
+      ]
+    }
+  ]
+}
